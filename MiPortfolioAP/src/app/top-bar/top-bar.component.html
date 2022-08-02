@@ -25,18 +25,36 @@
               </svg></a></li>
         </ul>
 
+
+        <!-- offacanvas -->
         <div class="col-md-3 text-end">
-          <button type="button" class="btn btn-outline-primary me-2">Login</button>
+          <button class="btn btn-outline-dark me-2" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            Menu
+          </button>
         </div>
-        <div class="col-md-2 text-start">
-          <a class="btn btn-outline-primary me-2" data-bs-toggle="dropdown" type="button"
-            aria-expanded="true">Menu</a>
-          <ul class="dropdown-menu">
-            <li><a routerLink="/experiencia" class="nav-link px-2 link-secondary">Experiencia</a></li>
-            <li><a routerLink="/estudios" class="nav-link px-2 link-dark">Estudios</a></li>
-            <li><a routerLink="/hardysoft" class="nav-link px-2 link-dark">Hard & Soft Skills</a></li>
-            <li><a routerLink="/proyectos" class="nav-link px-2 link-dark">Proyectos</a></li>
-          </ul>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div>
+              Acá encontrarás acceso a secciones de interes!
+            </div>
+            <span class="list-group list-group-flush mt-3 mx-3">
+              <a routerLink="/experiencia" class="list-group-item">Experiencia</a>
+              <a routerLink="/estudios" class="list-group-item">Estudios</a>
+              <a routerLink="/hardysoft" class="list-group-item">Hard & Soft Skills</a>
+              <a routerLink="/proyectos" class="list-group-item">Proyectos</a>
+            </span>
+          </div>
+        </div>
+
+        <!-- login -->
+        <div class="col-md-1 text-end">
+          <button type="button" class="btn btn-outline-dark me-2">Login</button>
         </div>
 
       </div>
