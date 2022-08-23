@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-experiencia',
@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
+  isLoggedIn:boolean = false;
 
-  constructor() { }
+  constructor() { 
+   }
 
   ngOnInit(): void {
   }
+
+  setLoggIn(){
+    this.isLoggedIn = true;
+  }
+  setLoggOut(){
+    this.isLoggedIn = false;
+  }
+
+  
 
 }

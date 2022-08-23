@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Mi Portfolio Personal';
+  title = 'Lean :: Mi Portfolio Personal!';
+
+  // este es el estado que resuelve o devuelve cuando esta loggeado
+  isLoggedIn = true;
+
+  onActivate(componentReference: any) {
+    if (this.isLoggedIn) {
+      componentReference.setLoggIn();
+    }
+    else {
+      componentReference.setLoggOut();
+    }
+  }
+
 }
