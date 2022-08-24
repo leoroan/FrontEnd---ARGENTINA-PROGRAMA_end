@@ -10,7 +10,7 @@ import { ExperienciaComponent } from './experiencia/experiencia.component';
 import { EstudiosComponent } from './estudios/estudios.component';
 import { HardysoftComponent } from './hardysoft/hardysoft.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
-import { EdicionComponent } from './experiencia/edicion/edicion.component';
+import { EdicionExperienciaComponent } from './experiencia/edicion-experiencia/edicion-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { EdicionComponent } from './experiencia/edicion/edicion.component';
     EstudiosComponent,
     HardysoftComponent,
     ProyectosComponent,
-    EdicionComponent
+    EdicionExperienciaComponent
   ],
   imports: [
     BrowserModule,
