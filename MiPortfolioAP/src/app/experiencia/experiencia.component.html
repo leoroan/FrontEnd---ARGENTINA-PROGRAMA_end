@@ -19,14 +19,10 @@
                 </p>
               </div>
             </div>
-
-            <div *ngIf="isLoggedIn" class="card-footer">
-              <small class="text-muted">Lastsd updated 3 mins ago</small>
-            </div>
-            
+            <app-edicion [isLoggedIn]="isLoggedIn"></app-edicion>
           </div>
         </div>
-      </div>      
+      </div>
     </div>
   </div>
 </body>
