@@ -27,10 +27,16 @@
 
         <!-- offacanvas -->
         <div class="col-md-3 text-end">
-          <button class="btn btn-outline-dark me-2" type="button" data-bs-toggle="offcanvas"
+
+          <button class="btn btn-outline-dark me-2 position-relative" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
             Menu
+            <span
+              class="position-absolute top-0 start-100 translate-middle ">
+              <i class="bi bi-stars" style="font-size: 1.75rem; color: goldenrod;"></i>
+            </span>
           </button>
+
         </div>
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
           aria-labelledby="offcanvasExampleLabel">
