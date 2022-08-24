@@ -11,6 +11,7 @@ import { EstudiosComponent } from './estudios/estudios.component';
 import { HardysoftComponent } from './hardysoft/hardysoft.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { EdicionExperienciaComponent } from './experiencia/edicion-experiencia/edicion-experiencia.component';
+import { EdicionEstudiosComponent } from './estudios/edicion-estudios/edicion-estudios.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { EdicionExperienciaComponent } from './experiencia/edicion-experiencia/e
     EstudiosComponent,
     HardysoftComponent,
     ProyectosComponent,
-    EdicionExperienciaComponent
+    EdicionExperienciaComponent,
+    EdicionEstudiosComponent
   ],
   imports: [
     BrowserModule,

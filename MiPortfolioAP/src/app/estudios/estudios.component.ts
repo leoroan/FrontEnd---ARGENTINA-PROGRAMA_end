@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EstudiosComponent implements OnInit {
 
-  constructor() { }
+  isLoggedIn:boolean = false;
+
+  constructor() { 
+   }
 
   ngOnInit(): void {
   }
+
+  setLoggIn(){
+    this.isLoggedIn = true;
+  }
+  setLoggOut(){
+    this.isLoggedIn = false;
+  }
+
 
 }
