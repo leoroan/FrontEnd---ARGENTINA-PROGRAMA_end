@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'Lean :: Mi Portfolio Personal!';
 
   // este es el estado que resuelve o devuelve cuando esta loggeado
-  isLoggedIn = true;
+  isLoggedIn = false;
 
   onActivate(componentReference: any) {
     if (this.isLoggedIn) {
