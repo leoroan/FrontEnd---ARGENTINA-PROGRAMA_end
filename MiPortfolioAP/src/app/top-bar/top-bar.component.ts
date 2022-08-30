@@ -15,4 +15,12 @@ export class TopBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logButonText():String{
+    if (this.isLoggedIn) {
+      return "LogOut"
+    }else{
+      return "LogIn";
+    }    
+  }
+
 }
