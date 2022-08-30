@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-top-bar',
@@ -9,6 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 export class TopBarComponent implements OnInit {
   @Input() isLoggedIn: any;
+  @Output() logoutClick = new EventEmitter();
   constructor() {
   }
 
@@ -21,6 +22,10 @@ export class TopBarComponent implements OnInit {
     }else{
       return "LogIn";
     }    
+  }
+
+  onLogOutButtonClick(){
+    this.logoutClick.emit()
   }
 
 }

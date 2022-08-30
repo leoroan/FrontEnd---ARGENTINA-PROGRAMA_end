@@ -59,7 +59,7 @@
         <!-- login trigger modal -->
         <div class="col-md-1 text-end">
           <button type="button" class="btn btn-outline-dark me-2" data-bs-toggle="modal"
-            data-bs-target="#login-Modal">{{logButonText()}}</button>
+            data-bs-target="#login-Modal" (click)="onLogOutButtonClick()">{{logButonText()}}</button>
         </div>
         <!-- Modal -->
         <app-login-modal *ngIf="!isLoggedIn"></app-login-modal>

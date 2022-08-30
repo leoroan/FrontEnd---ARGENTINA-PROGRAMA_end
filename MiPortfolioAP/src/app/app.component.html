@@ -1,6 +1,6 @@
 <title>{{title}}</title>
 <body class="container">
-  <app-top-bar [isLoggedIn]="isLoggedIn"></app-top-bar>
+  <app-top-bar (logoutClick)="logoutNow()" [isLoggedIn]="isLoggedIn"></app-top-bar>
   <router-outlet (activate)="onActivate($event)"></router-outlet>
   <app-bottom-bar></app-bottom-bar>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
