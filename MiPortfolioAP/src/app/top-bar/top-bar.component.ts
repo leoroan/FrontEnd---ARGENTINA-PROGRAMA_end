@@ -1,24 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-top-bar',
   templateUrl: './top-bar.component.html',
   styleUrls: ['./top-bar.component.css']
 })
-export class TopBarComponent implements OnInit {
-  isLoggedIn: boolean = false;
 
+
+export class TopBarComponent implements OnInit {
+  @Input() isLoggedIn: any;
   constructor() {
   }
 
   ngOnInit(): void {
-  }
-
-  setLoggIn() {
-    this.isLoggedIn = true;
-  }
-  setLoggOut() {
-    this.isLoggedIn = false;
   }
 
 }
