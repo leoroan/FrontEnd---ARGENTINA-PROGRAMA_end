@@ -13,6 +13,7 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
 import { EdicionExperienciaComponent } from './experiencia/edicion-experiencia/edicion-experiencia.component';
 import { EdicionEstudiosComponent } from './estudios/edicion-estudios/edicion-estudios.component';
 import { EdicionHardysoftComponent } from './hardysoft/edicion-hardysoft/edicion-hardysoft.component';
+import { EdicionProyectosComponent } from './proyectos/edicion-proyectos/edicion-proyectos.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { EdicionHardysoftComponent } from './hardysoft/edicion-hardysoft/edicion
     ProyectosComponent,
     EdicionExperienciaComponent,
     EdicionEstudiosComponent,
-    EdicionHardysoftComponent
+    EdicionHardysoftComponent,
+    EdicionProyectosComponent
   ],
   imports: [
     BrowserModule,

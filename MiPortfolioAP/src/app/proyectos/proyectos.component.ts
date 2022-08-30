@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
+  isLoggedIn: boolean = false;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
+  }
+
+  setLoggIn() {
+    this.isLoggedIn = true;
+  }
+  setLoggOut() {
+    this.isLoggedIn = false;
   }
 
 }
