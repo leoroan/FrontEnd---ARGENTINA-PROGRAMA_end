@@ -40,18 +40,18 @@
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
           aria-labelledby="offcanvasExampleLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel"># Mi menu</h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
-          <div class="offcanvas-body">
+          <div class="offcanvas-body fs-5">
             <div class="border-bottom pb-2">
               Acá encontrarás acceso a más secciones!
             </div>
-            <span class="list-group list-group-flush mt-3 mx-3">
-              <a routerLink="/experiencia" class="list-group-item">Experiencia</a>
-              <a routerLink="/estudios" class="list-group-item">Estudios</a>
-              <a routerLink="/hardysoft" class="list-group-item">Hard & Soft Skills</a>
-              <a routerLink="/proyectos" class="list-group-item">Proyectos</a>
+            <span class="list-group list-group-flush mt-3 mx-3 fs-1">
+              <a routerLink="/experiencia" class="list-group-item"><i class="bi bi-chevron-double-right fs-3"> Experiencia</i></a>
+              <a routerLink="/estudios" class="list-group-item"><i class="bi bi-chevron-double-right fs-3"> Estudios</i></a>
+              <a routerLink="/hardysoft" class="list-group-item"><i class="bi bi-chevron-double-right fs-3"> Hard & Soft Skills</i></a>
+              <a routerLink="/proyectos" class="list-group-item"><i class="bi bi-chevron-double-right fs-3"> Proyectos</i></a>
             </span>
           </div>
         </div>
@@ -62,8 +62,8 @@
             data-bs-target="#login-Modal">{{logButonText()}}</button>
         </div>
         <!-- Modal -->
-        <app-login-modal *ngIf="!isLoggedIn"></app-login-modal>   
-        
+        <app-login-modal *ngIf="!isLoggedIn"></app-login-modal>
+
 
       </div>
     </div>
