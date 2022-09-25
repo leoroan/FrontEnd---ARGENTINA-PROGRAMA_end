@@ -9,7 +9,7 @@
 
         <!-- Form control -->
         
-        <form [formGroup]="form">
+        <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
           <div class="mb-3 row">
             <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
             <div class="col-sm-10">

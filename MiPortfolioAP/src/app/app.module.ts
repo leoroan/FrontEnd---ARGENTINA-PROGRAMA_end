@@ -16,6 +16,9 @@ import { EdicionHardysoftComponent } from './hardysoft/edicion-hardysoft/edicion
 import { EdicionProyectosComponent } from './proyectos/edicion-proyectos/edicion-proyectos.component';
 import { LoginModalComponent } from './top-bar/login-modal/login-modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PortfolioService } from './servicios/portfolio.service';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InterceptorService } from './servicios/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [PortfolioService,{
+    provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
