@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PortfolioService } from '../servicios/portfolio.service';
+
 
 @Component({
   selector: 'app-acercade',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AcercadeComponent implements OnInit {
 
-  constructor() { }
+  miPortfolio:any;
+
+  constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
+    this.datosPortfolio.obtenerDatos().subscribe(data =>{
+      console.log("datos personales"+ JSON.stringify(data));
+      this.miPortfolio = data[0];  //??? ver donde estan cuando se haga
+    })
   }
 
 }
