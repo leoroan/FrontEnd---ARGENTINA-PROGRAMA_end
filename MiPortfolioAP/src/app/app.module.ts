@@ -15,6 +15,7 @@ import { EdicionEstudiosComponent } from './estudios/edicion-estudios/edicion-es
 import { EdicionHardysoftComponent } from './hardysoft/edicion-hardysoft/edicion-hardysoft.component';
 import { EdicionProyectosComponent } from './proyectos/edicion-proyectos/edicion-proyectos.component';
 import { LoginModalComponent } from './top-bar/login-modal/login-modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { LoginModalComponent } from './top-bar/login-modal/login-modal.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

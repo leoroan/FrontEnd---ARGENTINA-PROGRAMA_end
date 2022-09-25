@@ -8,7 +8,7 @@ import { HardysoftComponent } from './hardysoft/hardysoft.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/acercade', pathMatch: 'full' },
+  { path: '', redirectTo: 'acercade', pathMatch: 'full' },
   { path: 'acercade', component: AcercadeComponent },
   { path: 'estudios', component: EstudiosComponent },
   { path: 'experiencia', component: ExperienciaComponent },
