@@ -15,7 +15,7 @@ export class LoginModalComponent implements OnInit {
   constructor(private formBuilder:FormBuilder, private autenticationService: AutenticacionService, private ruta:Router) {
     this.form = this.formBuilder.group(
       {
-        // los formluarios estan asociados alos modelos,
+        // los formluarios estan asociados a los modelos,
         // tenemos q tener en cuenta como espera los datos la API.
         // ej: "email":"unmail@mail.com", y "password":"123456",
         // el que envio a una url ..."auth/login"
@@ -39,7 +39,7 @@ export class LoginModalComponent implements OnInit {
   onEnviar(event:Event){
     event.preventDefault;
     this.autenticationService.iniciarSesion(this.form.value).subscribe(data => {
-      //console.log("DATA:" + JSON.stringify(data));
+      console.log("DATA:" + JSON.stringify(data));
       this.ruta.navigate(['/acercade']);
     })
   }

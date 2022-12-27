@@ -10,10 +10,10 @@ export class AutenticacionService {
 
   url_api = "www.unaurl.com"
   currentUserSubject: BehaviorSubject<any>;
-
   constructor(private http: HttpClient) {
+    console.log("El servicio de autenticacion está corriendo")
     this.currentUserSubject = new BehaviorSubject(JSON.parse
-      (sessionStorage.getItem('currentUser') || "{}"))
+      (sessionStorage.getItem('currentUser') || '{}'))
   }
 
   iniciarSesion(credenciales: any): Observable<any> {
