@@ -14,7 +14,6 @@ import { EdicionExperienciaComponent } from './experiencia/edicion-experiencia/e
 import { EdicionEstudiosComponent } from './estudios/edicion-estudios/edicion-estudios.component';
 import { EdicionHardysoftComponent } from './hardysoft/edicion-hardysoft/edicion-hardysoft.component';
 import { EdicionProyectosComponent } from './proyectos/edicion-proyectos/edicion-proyectos.component';
-import { LoginModalComponent } from './top-bar/login-modal/login-modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PortfolioService } from './servicios/portfolio.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -34,7 +33,7 @@ import { InterceptorService } from './servicios/interceptor.service';
     EdicionEstudiosComponent,
     EdicionHardysoftComponent,
     EdicionProyectosComponent,
-    LoginModalComponent
+
   ],
   imports: [
     BrowserModule,

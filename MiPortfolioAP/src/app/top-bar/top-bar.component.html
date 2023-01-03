@@ -48,10 +48,14 @@
               Acá encontrarás acceso a más secciones!
             </div>
             <span class="list-group list-group-flush mt-3 mx-3 fs-1">
-              <a routerLink="/experiencia" class="list-group-item"><i class="bi bi-chevron-double-right fs-3"> Experiencia</i></a>
-              <a routerLink="/estudios" class="list-group-item"><i class="bi bi-chevron-double-right fs-3"> Estudios</i></a>
-              <a routerLink="/hardysoft" class="list-group-item"><i class="bi bi-chevron-double-right fs-3"> Hard & Soft Skills</i></a>
-              <a routerLink="/proyectos" class="list-group-item"><i class="bi bi-chevron-double-right fs-3"> Proyectos</i></a>
+              <a routerLink="/experiencia" class="list-group-item"><i class="bi bi-chevron-double-right fs-3">
+                  Experiencia</i></a>
+              <a routerLink="/estudios" class="list-group-item"><i class="bi bi-chevron-double-right fs-3">
+                  Estudios</i></a>
+              <a routerLink="/hardysoft" class="list-group-item"><i class="bi bi-chevron-double-right fs-3"> Hard & Soft
+                  Skills</i></a>
+              <a routerLink="/proyectos" class="list-group-item"><i class="bi bi-chevron-double-right fs-3">
+                  Proyectos</i></a>
             </span>
           </div>
         </div>
@@ -59,11 +63,41 @@
         <!-- login trigger modal -->
         <div class="col-md-1 text-end">
           <button type="button" class="btn btn-outline-dark me-2" data-bs-toggle="modal"
-            data-bs-target="#login-Modal" (click)="onLogOutButtonClick()">{{logButonText()}}</button>
+            data-bs-target="#login-Modal">Log In</button>
         </div>
         <!-- Modal -->
-        <app-login-modal *ngIf="!isLoggedIn"></app-login-modal>
-
+        <div class="modal fade" id="login-Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="login-Modal">Acceso de usuario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="text" readonly class="form-control-plaintext" id="staticEmail"
+                        value="Your personal e-mail">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"><i
+                    class="bi bi-door-closed"></i>Cancelar</button>
+                <button type="button" class="btn btn-outline-primary"><i class="bi bi-door-open"></i>Ingresar</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
