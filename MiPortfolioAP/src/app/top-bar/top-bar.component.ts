@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-top-bar',
@@ -8,10 +9,27 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 
 export class TopBarComponent implements OnInit {
-  constructor() {
+
+  form:FormGroup;
+
+  constructor( private formBuilder:FormBuilder) {
+    this.form = this.formBuilder.group(
+      {
+        email:['', [Validators.required, Validators.email]],
+        password:['', [Validators.required, Validators.minLength(10)]]
+      }
+    )
   }
 
   ngOnInit(): void {
+  }
+
+  get email (){
+    return this.form.get('email');
+  }
+
+  get password (){
+    return this.form.get('password');
   }
 
 
