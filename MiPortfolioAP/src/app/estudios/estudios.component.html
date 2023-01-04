@@ -1,0 +1,33 @@
+<body>
+  <h1 class=" my-4"> #Formacion Academica y profesional</h1>
+  <div class="container my-5">
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <!-- *ngFor-->
+      <div class="col">
+        <div class="card h-100" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4" style="background-color: grey ;">
+              <img src="..." class="img-fluid rounded-start" alt="logo institucion">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Nombre, Carrera o Titulo</h5>
+                <p class="card-text">
+                  <li>periodo</li>
+                  <li>otra info?</li>
+                </p>
+              </div>
+            </div>
+            <app-edicion-estudios [isLoggedIn]="isLoggedIn"></app-edicion-estudios>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+</body>
+<div class="d-grid gap-2 col-6 mx-auto">
+  <a class="btn btn-outline-secondary btn-lg" href="#" role="button">Volver al Inicio
+    <i class="bi bi-arrow-90deg-left"></i>
+  </a>
+</div>
