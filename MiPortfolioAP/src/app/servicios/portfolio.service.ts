@@ -8,12 +8,12 @@ import { Observable } from 'rxjs';
 export class PortfolioService {
 
   // url de mi bbdd
-  url: String="http://.../api/";
+  url: String="http://localhost:8080/ver/";
 
   constructor( private http:HttpClient) { }
 
   obtenerDatos():Observable<any>{
-    return this.http.get<any>(this.url+"persona");//acercade, educacion..
+    return this.http.get<any>(this.url+"persona");
   }
 
 }
