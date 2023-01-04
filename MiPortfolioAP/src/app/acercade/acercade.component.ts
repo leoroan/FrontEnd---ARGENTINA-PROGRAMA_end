@@ -16,7 +16,7 @@ export class AcercadeComponent implements OnInit {
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data =>{
       //console.log("datos personales"+ JSON.stringify(data[0]));
-      this.miPortfolio = data[0];  //??? ver donde estan cuando se haga
+      this.miPortfolio = data[0]; 
     })
   }
   
