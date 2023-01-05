@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { PortfolioService } from '../servicios/portfolio.service';
 
 @Component({
   selector: 'app-experiencia',
@@ -6,21 +7,17 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-  isLoggedIn:boolean = false;
+  
+  miExperiencia:any;
 
-  constructor() { 
-   }
+  constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
+    this.datosPortfolio.obtenerDatosExperiencias().subscribe(data =>{
+      //console.log("exp personales"+ JSON.stringify(data));
+      this.miExperiencia = data; 
+    })
   }
-
-  setLoggIn(){
-    this.isLoggedIn = true;
-  }
-  setLoggOut(){
-    this.isLoggedIn = false;
-  }
-
   
 
 }

@@ -8,12 +8,28 @@ import { Observable } from 'rxjs';
 export class PortfolioService {
 
   // url de mi bbdd
-  url: String="http://localhost:8080/ver/";
+  url_ver: String="http://localhost:8080/ver/";
 
   constructor( private http:HttpClient) { }
 
-  obtenerDatos():Observable<any>{
-    return this.http.get<any>(this.url+"persona");
+  obtenerDatosPersona():Observable<any>{
+    return this.http.get<any>(this.url_ver+"persona");
+  }
+
+  obtenerDatosExperiencias():Observable<any>{
+    return this.http.get<any>(this.url_ver+"experiencias");
+  }
+
+  obtenerDatosHabilidades():Observable<any>{
+    return this.http.get<any>(this.url_ver+"habilidad");
+  }
+
+  obtenerDatosEducacion():Observable<any>{
+    return this.http.get<any>(this.url_ver+"educacion");
+  }
+
+  obtenerDatosProyectos():Observable<any>{
+    return this.http.get<any>(this.url_ver+"proyecto");
   }
 
 }
