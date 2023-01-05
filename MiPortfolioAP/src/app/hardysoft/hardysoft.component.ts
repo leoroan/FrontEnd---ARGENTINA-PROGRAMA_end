@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PortfolioService } from '../servicios/portfolio.service';
 
 @Component({
   selector: 'app-hardysoft',
@@ -6,19 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hardysoft.component.css']
 })
 export class HardysoftComponent implements OnInit {
-  isLoggedIn:boolean = false;
+  
+  misHabilidades:any;
 
-  constructor() { 
-   }
+  constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-  }
-
-  setLoggIn(){
-    this.isLoggedIn = true;
-  }
-  setLoggOut(){
-    this.isLoggedIn = false;
+    this.datosPortfolio.obtenerDatosHabilidades().subscribe(data =>{
+      this.misHabilidades = data; 
+    })
   }
 
 }

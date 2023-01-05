@@ -3,25 +3,23 @@
     blandas</h1>
   <div class="container my-5">
 
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-      <!-- *ngFor-->
+    <div *ngFor="let hab of misHabilidades" class="row row-cols-1 row-cols-md-2 g-4 mb-3">
       <div class="col">
         <div class="card h-100" style="max-width: 540px;">
           <div class="row g-0 border border-success border-2 rounded-3">
             <div class="progress">
               <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
-                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" [style.width.%]="hab.porcentaje"></div>
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">Titulo del puesto</h5>
+                <h5 class="card-title">{{hab.nombre_habilidad}}</h5>
                 <p class="card-text">
-                  <li>periodo</li>
-                  <li>descripcion de la act. realizada</li>
+                  <li>{{hab.descripcion}}</li>
                 </p>
               </div>
             </div>
-            <app-edicion-hardysoft [isLoggedIn]="isLoggedIn"></app-edicion-hardysoft>
+            <app-edicion-hardysoft></app-edicion-hardysoft>
           </div>
         </div>
       </div>
