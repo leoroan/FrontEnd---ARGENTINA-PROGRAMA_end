@@ -2,24 +2,23 @@
   <h1 class=" my-4"> #Formacion Academica y profesional</h1>
   <div class="container my-5">
 
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-      <!-- *ngFor-->
+    <div *ngFor="let edu of miEducacion" class="row row-cols-1 row-cols-md-2 g-4">
       <div class="col">
         <div class="card h-100" style="max-width: 540px;">
           <div class="row g-0">
             <div class="col-md-4" style="background-color: grey ;">
-              <img src="..." class="img-fluid rounded-start" alt="logo institucion">
+              <img [src]="edu.url_logo" [alt]="edu.nombre_instituto" class="img-fluid rounded-start" alt="logo institucion">
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">Nombre, Carrera o Titulo</h5>
+                <h5 class="card-title mb-1">{{edu.titulo}}</h5>
+                <h6 class="card-subtitle mb-2">{{edu.nombre_instituto}}</h6>
                 <p class="card-text">
-                  <li>periodo</li>
-                  <li>otra info?</li>
+                  <li>{{edu.fecha_inicio}} a {{edu.fecha_fin}}</li>
                 </p>
               </div>
             </div>
-            <app-edicion-estudios [isLoggedIn]="isLoggedIn"></app-edicion-estudios>
+            <app-edicion-estudios></app-edicion-estudios>
           </div>
         </div>
       </div>      

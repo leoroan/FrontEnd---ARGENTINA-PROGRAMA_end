@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PortfolioService } from '../servicios/portfolio.service';
 
 @Component({
   selector: 'app-estudios',
@@ -7,19 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EstudiosComponent implements OnInit {
 
-  isLoggedIn:boolean = false;
+  miEducacion:any;
 
-  constructor() { 
-   }
+  constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-  }
-
-  setLoggIn(){
-    this.isLoggedIn = true;
-  }
-  setLoggOut(){
-    this.isLoggedIn = false;
+    this.datosPortfolio.obtenerDatosEducacion().subscribe(data =>{
+      this.miEducacion = data; 
+    })
   }
 
 
