@@ -1,14 +1,17 @@
 <body>
+
   <h1 class=" my-4"> #Proyectos realizados</h1>
-  <div class="container my-5 mx-5">
+  <div *ngFor="let proy of misProyectos" class="container my-5 mx-5">
     <div class="mt-4 p-5 bg-primary text-white rounded">
-      <h1>#Nombre del proyecto hecho</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, libero suscipit autem, eius veritatis et
-        natus eaque quas ea a eum blanditiis tempora beatae recusandae! Quaerat beatae nostrum voluptatibus voluptas?
+      <h1>{{proy.nombre}}</h1>
+      <p>
+        {{ proy.descripcion}} <br>
+        {{ proy.url_proyecto}}
       </p>
     </div>
-    <app-edicion-proyectos [isLoggedIn]="isLoggedIn"></app-edicion-proyectos>
+    <app-edicion-proyectos></app-edicion-proyectos>
   </div>
+
 </body>
 
 <div class="d-grid gap-2 col-6 mx-auto">
