@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { PortfolioService } from '../servicios/portfolio.service';
 
 @Component({
   selector: 'app-top-bar',
@@ -11,8 +12,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class TopBarComponent implements OnInit {
 
   form:FormGroup;
+  miPortfolio:any;
 
-  constructor( private formBuilder:FormBuilder) {
+  constructor( private formBuilder:FormBuilder, private datosPortfolio:PortfolioService) {
     this.form = this.formBuilder.group(
       {
         email:['', [Validators.required, Validators.email]],
@@ -22,6 +24,10 @@ export class TopBarComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.datosPortfolio.obtenerDatosPersona().subscribe(data =>{
+      //console.log("datos personales"+ JSON.stringify(data[0]));
+      this.miPortfolio = data[0]; 
+    })
   }
 
   get email (){
