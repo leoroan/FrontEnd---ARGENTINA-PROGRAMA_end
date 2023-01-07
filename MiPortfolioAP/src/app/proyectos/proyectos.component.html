@@ -1,6 +1,15 @@
 <body>
 
-  <h1 class=" my-4"> #Proyectos realizados</h1>
+  <div class="row align-items-center">
+    <div class="col-8">
+      <h1 class=" my-4"> #Proyectos realizados</h1>
+    </div>
+    <div class="col-4">
+      <button type="button" class="btn btn-secondary"><i class="bi bi-plus-square" style="font-size: 1rem"></i>
+        Agregar</button>
+    </div>
+  </div>
+
   <div *ngFor="let proy of misProyectos" class="container my-5 mx-5">
     <div class="mt-4 p-5 bg-primary text-white rounded">
       <h1>{{proy.nombre}}</h1>
