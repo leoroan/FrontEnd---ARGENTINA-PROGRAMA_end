@@ -18,7 +18,7 @@
                 </p>
               </div>
             </div>
-            <app-edicion-estudios></app-edicion-estudios>
+            <app-edicion-estudios [thisEdu]="edu.id" (deleteEvent)="refreshList()"></app-edicion-estudios>
           </div>
         </div>
       </div>      

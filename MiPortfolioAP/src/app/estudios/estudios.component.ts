@@ -18,5 +18,9 @@ export class EstudiosComponent implements OnInit {
     })
   }
 
+  refreshList() {
+    this.ngOnInit();
+  }
+
 
 }
