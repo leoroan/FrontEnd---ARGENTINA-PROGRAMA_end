@@ -7,8 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class EdicionExperienciaComponent implements OnInit {
 
-  @Input() isLoggedIn: any;
-
   constructor() { }
 
   ngOnInit(): void {
