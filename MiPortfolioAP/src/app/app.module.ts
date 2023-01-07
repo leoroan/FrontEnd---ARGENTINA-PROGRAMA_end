@@ -23,6 +23,7 @@ import { EdicionCrearNuevoComponent } from './experiencia/edicion-crear-nuevo/ed
 import { EdicionCrearNuevoHabilidadComponent } from './hardysoft/edicion-crear-nuevo-habilidad/edicion-crear-nuevo-habilidad.component';
 import { EdicionCrearNuevoProyectoComponent } from './proyectos/edicion-crear-nuevo-proyecto/edicion-crear-nuevo-proyecto.component';
 import { EdicionCrearNuevoEstudioComponent } from './estudios/edicion-crear-nuevo-estudio/edicion-crear-nuevo-estudio.component';
+import { EdicionEditarPersonaComponent } from './top-bar/edicion-editar-persona/edicion-editar-persona.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { EdicionCrearNuevoEstudioComponent } from './estudios/edicion-crear-nuev
     EdicionCrearNuevoHabilidadComponent,
     EdicionCrearNuevoProyectoComponent,
     EdicionCrearNuevoEstudioComponent,
+    EdicionEditarPersonaComponent,
 
   ],
   imports: [
