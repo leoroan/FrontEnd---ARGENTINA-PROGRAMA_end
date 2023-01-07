@@ -18,6 +18,10 @@ export class ExperienciaComponent implements OnInit {
       this.miExperiencia = data; 
     })
   }
+
+  refreshList() {
+    this.ngOnInit();
+  }
   
 
 }
