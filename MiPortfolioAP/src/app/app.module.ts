@@ -22,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { EdicionCrearNuevoComponent } from './experiencia/edicion-crear-nuevo/edicion-crear-nuevo.component';
 import { EdicionCrearNuevoHabilidadComponent } from './hardysoft/edicion-crear-nuevo-habilidad/edicion-crear-nuevo-habilidad.component';
 import { EdicionCrearNuevoProyectoComponent } from './proyectos/edicion-crear-nuevo-proyecto/edicion-crear-nuevo-proyecto.component';
+import { EdicionCrearNuevoEstudioComponent } from './estudios/edicion-crear-nuevo-estudio/edicion-crear-nuevo-estudio.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { EdicionCrearNuevoProyectoComponent } from './proyectos/edicion-crear-nu
     EdicionCrearNuevoComponent,
     EdicionCrearNuevoHabilidadComponent,
     EdicionCrearNuevoProyectoComponent,
+    EdicionCrearNuevoEstudioComponent,
 
   ],
   imports: [
