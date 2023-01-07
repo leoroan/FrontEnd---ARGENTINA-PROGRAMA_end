@@ -8,52 +8,75 @@ import { Observable } from 'rxjs';
 export class PortfolioService {
 
   // url de mi bbdd
-  url_ver: String="http://localhost:8080/ver/";
-  url_borrar: String="http://localhost:8080/borrar/";
+  url_ver: String = "http://localhost:8080/ver/";
+  url_borrar: String = "http://localhost:8080/borrar/";
+  url_nueva_update: String = "http://localhost:8080/nueva/";
 
-  constructor( private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  obtenerDatosPersona():Observable<any>{
-    return this.http.get<any>(this.url_ver+"persona");
+  obtenerDatosPersona(): Observable<any> {
+    return this.http.get<any>(this.url_ver + "persona");
   }
 
-  obtenerDatosExperiencias():Observable<any>{
-    return this.http.get<any>(this.url_ver+"experiencias");
+  actualizarDatosPersona(dat: any): Observable<any> {
+    return this.http.post<any>(this.url_nueva_update + "persona", dat);
   }
 
-  obtenerDatosHabilidades():Observable<any>{
-    return this.http.get<any>(this.url_ver+"habilidad");
+  obtenerDatosExperiencias(): Observable<any> {
+    return this.http.get<any>(this.url_ver + "experiencias");
   }
 
-  obtenerDatosEducacion():Observable<any>{
-    return this.http.get<any>(this.url_ver+"educacion");
+  obtenerDatosHabilidades(): Observable<any> {
+    return this.http.get<any>(this.url_ver + "habilidad");
   }
 
-  obtenerDatosProyectos():Observable<any>{
-    return this.http.get<any>(this.url_ver+"proyecto");
+  obtenerDatosEducacion(): Observable<any> {
+    return this.http.get<any>(this.url_ver + "educacion");
   }
 
-  borrarDatosExperiencias(id: number):Observable<number>{
+  obtenerDatosProyectos(): Observable<any> {
+    return this.http.get<any>(this.url_ver + "proyecto");
+  }
+
+  borrarDatosExperiencias(id: number): Observable<number> {
     //console.log("borrado id:"+id);
     //console.log(this.url_borrar+"experiencia/"+id);
-    let httpheaders=new HttpHeaders()
-    .set('Content-type','application/Json');
-    let options={
-      headers:httpheaders
+    let httpheaders = new HttpHeaders()
+      .set('Content-type', 'application/Json');
+    let options = {
+      headers: httpheaders
     };
-    return this.http.delete<number>(this.url_borrar+"experiencia/"+id);
+    return this.http.delete<number>(this.url_borrar + "experiencia/" + id);
   }
 
-  borrarDatosHabilidades(id: number):Observable<number>{
-    return this.http.delete<number>(this.url_borrar+"habilidad/"+id);
+  borrarDatosHabilidades(id: number): Observable<number> {
+    return this.http.delete<number>(this.url_borrar + "habilidad/" + id);
   }
 
-  borrarDatosEducacion(id: number):Observable<number>{
-    return this.http.delete<number>(this.url_borrar+"educacion/"+id);
+  borrarDatosEducacion(id: number): Observable<number> {
+    return this.http.delete<number>(this.url_borrar + "educacion/" + id);
   }
 
-  borrarDatosProyectos(id: number):Observable<number>{
-    return this.http.delete<number>(this.url_borrar+"proyecto/"+id);
+  borrarDatosProyectos(id: number): Observable<number> {
+    return this.http.delete<number>(this.url_borrar + "proyecto/" + id);
   }
+
+  agregarActualizarDatosExperiencias(dat: any): Observable<any> {
+    return this.http.post<any>(this.url_nueva_update + "experiencias", dat);
+  }
+
+  agregarActualizarDatosHabilidades(dat: any): Observable<any> {
+    return this.http.post<any>(this.url_nueva_update + "habilidad", dat);
+  }
+
+  agregarActualizarDatosEducacion(dat: any): Observable<any> {
+    return this.http.post<any>(this.url_nueva_update + "educacion", dat);
+  }
+
+  agregarActualizarDatosProyectos(dat: any): Observable<any> {
+    return this.http.post<any>(this.url_nueva_update + "proyecto", dat);
+  }
+
+
 
 }
