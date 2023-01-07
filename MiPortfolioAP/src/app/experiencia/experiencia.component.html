@@ -5,11 +5,11 @@
       <h1 class=" my-4"> #Experiencia profesional</h1>
     </div>
     <div class="col-4">
-      <button type="button" class="btn btn-secondary"><i class="bi bi-plus-square" style="font-size: 1rem"></i> Agregar</button>
+      <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#agregarModal"><i class="bi bi-plus-square" style="font-size: 1rem"></i> Agregar</button>
+      <app-edicion-crear-nuevo></app-edicion-crear-nuevo>
     </div>
   </div>  
   <div class="container my-5">
-
     <div *ngFor="let exp of miExperiencia"  class="row row-cols-1 row-cols-md-2 g-4 mb-3">
       <div class="col">
         <div class="card h-100" style="max-width: 540px;">
