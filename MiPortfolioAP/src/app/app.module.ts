@@ -21,6 +21,7 @@ import { InterceptorService } from './servicios/interceptor.service';
 import { HttpClientModule } from '@angular/common/http';
 import { EdicionCrearNuevoComponent } from './experiencia/edicion-crear-nuevo/edicion-crear-nuevo.component';
 import { EdicionCrearNuevoHabilidadComponent } from './hardysoft/edicion-crear-nuevo-habilidad/edicion-crear-nuevo-habilidad.component';
+import { EdicionCrearNuevoProyectoComponent } from './proyectos/edicion-crear-nuevo-proyecto/edicion-crear-nuevo-proyecto.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { EdicionCrearNuevoHabilidadComponent } from './hardysoft/edicion-crear-n
     EdicionProyectosComponent,
     EdicionCrearNuevoComponent,
     EdicionCrearNuevoHabilidadComponent,
+    EdicionCrearNuevoProyectoComponent,
 
   ],
   imports: [
