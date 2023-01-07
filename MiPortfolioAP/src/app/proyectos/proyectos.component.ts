@@ -18,4 +18,8 @@ export class ProyectosComponent implements OnInit {
     })
   }
 
+  refreshList() {
+    this.ngOnInit();
+  }
+
 }

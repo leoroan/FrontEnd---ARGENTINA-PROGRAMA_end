@@ -9,7 +9,7 @@
         {{ proy.url_proyecto}}
       </p>
     </div>
-    <app-edicion-proyectos></app-edicion-proyectos>
+    <app-edicion-proyectos [thisProy]="proy.id" (deleteEvent)="refreshList()"></app-edicion-proyectos>
   </div>
 
 </body>
