@@ -1,13 +1,20 @@
 <body>
-  <h1 class=" my-4"> #Formacion Academica y profesional</h1>
+  <div class="row align-items-center">
+    <div class="col-8">
+      <h1 class=" my-4"> #Formacion Academica y profesional</h1>
+    </div>
+    <div class="col-4">
+      <button type="button" class="btn btn-secondary"><i class="bi bi-plus-square" style="font-size: 1rem"></i> Agregar</button>
+    </div>
+  </div>
   <div class="container my-5">
-
     <div *ngFor="let edu of miEducacion" class="row row-cols-1 row-cols-md-2 g-4 mb-3">
       <div class="col">
         <div class="card h-100" style="max-width: 540px;">
           <div class="row g-0">
             <div class="col-md-4" style="background-color: grey ;">
-              <img [src]="edu.url_logo" [alt]="edu.nombre_instituto" class="img-fluid rounded-start" alt="logo institucion">
+              <img [src]="edu.url_logo" [alt]="edu.nombre_instituto" class="img-fluid rounded-start"
+                alt="logo institucion">
             </div>
             <div class="col-md-8">
               <div class="card-body">
@@ -21,7 +28,7 @@
             <app-edicion-estudios [thisEdu]="edu.id" (deleteEvent)="refreshList()"></app-edicion-estudios>
           </div>
         </div>
-      </div>      
+      </div>
     </div>
   </div>
 </body>
