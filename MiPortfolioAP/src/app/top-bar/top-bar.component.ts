@@ -11,16 +11,11 @@ import { PortfolioService } from '../servicios/portfolio.service';
 
 export class TopBarComponent implements OnInit {
 
-  form:FormGroup;
+  
   miPortfolio:any;
 
-  constructor( private formBuilder:FormBuilder, private datosPortfolio:PortfolioService) {
-    this.form = this.formBuilder.group(
-      {
-        email:['', [Validators.required, Validators.email]],
-        password:['', [Validators.required, Validators.minLength(10)]]
-      }
-    )
+  constructor(private datosPortfolio:PortfolioService) {
+    
   }
 
   ngOnInit(): void {
@@ -30,13 +25,7 @@ export class TopBarComponent implements OnInit {
     })
   }
 
-  get email (){
-    return this.form.get('email');
-  }
-
-  get password (){
-    return this.form.get('password');
-  }
+  
 
 
 
