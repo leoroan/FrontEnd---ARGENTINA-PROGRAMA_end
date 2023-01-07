@@ -20,6 +20,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorService } from './servicios/interceptor.service';
 import { HttpClientModule } from '@angular/common/http';
 import { EdicionCrearNuevoComponent } from './experiencia/edicion-crear-nuevo/edicion-crear-nuevo.component';
+import { EdicionCrearNuevoHabilidadComponent } from './hardysoft/edicion-crear-nuevo-habilidad/edicion-crear-nuevo-habilidad.component';
+
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { EdicionCrearNuevoComponent } from './experiencia/edicion-crear-nuevo/ed
     EdicionHardysoftComponent,
     EdicionProyectosComponent,
     EdicionCrearNuevoComponent,
+    EdicionCrearNuevoHabilidadComponent,
 
   ],
   imports: [
