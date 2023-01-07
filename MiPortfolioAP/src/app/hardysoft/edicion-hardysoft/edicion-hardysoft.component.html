@@ -1,4 +1,4 @@
-<div *ngIf="isLoggedIn" class="container text-center card-footer">
+<div class="container text-center card-footer">
   <div class="row">
     <div class="col d-grid">
       <button type="button" class="btn">
@@ -6,7 +6,7 @@
       </button>
     </div>
     <div class="col d-grid">
-      <button type="button" class="btn">
+      <button type="button" class="btn" (click)="onClickDelete()">
         <i class="bi bi-trash text-muted"></i>
       </button>
     </div>

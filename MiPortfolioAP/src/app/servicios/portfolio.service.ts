@@ -44,4 +44,16 @@ export class PortfolioService {
     return this.http.delete<number>(this.url_borrar+"experiencia/"+id);
   }
 
+  borrarDatosHabilidades(id: number):Observable<number>{
+    return this.http.delete<number>(this.url_borrar+"habilidad/"+id);
+  }
+
+  borrarDatosEducacion(id: number):Observable<number>{
+    return this.http.delete<number>(this.url_borrar+"educacion/"+id);
+  }
+
+  borrarDatosProyectos(id: number):Observable<number>{
+    return this.http.delete<number>(this.url_borrar+"proyecto/"+id);
+  }
+
 }

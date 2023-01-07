@@ -18,4 +18,8 @@ export class HardysoftComponent implements OnInit {
     })
   }
 
+  refreshList() {
+    this.ngOnInit();
+  }
+
 }
