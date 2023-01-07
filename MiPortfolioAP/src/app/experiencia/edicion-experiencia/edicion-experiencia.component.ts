@@ -9,6 +9,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 export class EdicionExperienciaComponent implements OnInit {
 
   @Input() thisExp: any;
+  @Input() isLoggedIn: any;
   @Output() deleteEvent = new EventEmitter();
   
   constructor(private datosPortfolio:PortfolioService) { }
