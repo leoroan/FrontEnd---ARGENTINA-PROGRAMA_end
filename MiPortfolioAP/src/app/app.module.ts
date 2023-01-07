@@ -19,6 +19,7 @@ import { PortfolioService } from './servicios/portfolio.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorService } from './servicios/interceptor.service';
 import { HttpClientModule } from '@angular/common/http';
+import { EdicionCrearNuevoComponent } from './experiencia/edicion-crear-nuevo/edicion-crear-nuevo.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
     EdicionEstudiosComponent,
     EdicionHardysoftComponent,
     EdicionProyectosComponent,
+    EdicionCrearNuevoComponent,
 
   ],
   imports: [
