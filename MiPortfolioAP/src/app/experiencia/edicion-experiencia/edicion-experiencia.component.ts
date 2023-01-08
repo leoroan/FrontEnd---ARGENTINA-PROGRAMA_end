@@ -11,19 +11,19 @@ export class EdicionExperienciaComponent implements OnInit {
   @Input() thisExp: any;
   @Input() isLoggedIn: any;
   @Output() deleteEvent = new EventEmitter();
-  
-  constructor(private datosPortfolio:PortfolioService) { }
 
-  ngOnInit(): void {    
+  constructor(private datosPortfolio: PortfolioService) { }
+
+  ngOnInit(): void {
   }
 
-  onClickDelete(){
+  onClickDelete() {
     this.datosPortfolio.borrarDatosExperiencias(this.thisExp)
-      .subscribe(data =>{       
-        console.log("Deleted id: "+this.thisExp );
+      .subscribe(data => {
+        console.log("Deleted id: " + this.thisExp);
         //location.reload();
         this.deleteEvent.emit();
-    })
+      })
   }
 
 }

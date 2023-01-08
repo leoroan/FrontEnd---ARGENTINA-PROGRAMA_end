@@ -6,7 +6,7 @@
     </div>
     <div class="col-4">
       <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#agregarModal"><i class="bi bi-plus-square" style="font-size: 1rem"></i> Agregar</button>
-      <app-edicion-crear-nuevo></app-edicion-crear-nuevo>
+      <app-edicion-crear-nuevo (createEvent)="refreshList()"></app-edicion-crear-nuevo>
     </div>
   </div>  
   <div class="container my-5">

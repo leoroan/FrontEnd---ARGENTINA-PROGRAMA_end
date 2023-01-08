@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-edicion-crear-nuevo',
@@ -7,9 +9,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EdicionCrearNuevoComponent implements OnInit {
 
-  constructor() { }
+  someInput: any;
+  formdata: any;
+  @Output() createEvent = new EventEmitter();
+
+  constructor(private datosPortfolio: PortfolioService) { }
 
   ngOnInit(): void {
+
+    this.formdata = new FormGroup({
+      titulo_puesto: new FormControl(),
+      periodo_Trabajado: new FormControl(),
+      logo_url: new FormControl(),
+      descripcion: new FormControl(),
+    });
+
   }
+
+  onClickSubmit(datos: any) {
+    this.datosPortfolio.agregarActualizarDatosExperiencias(datos)
+      .subscribe(data => {
+        console.log(JSON.stringify(datos));
+        this.createEvent.emit();
+      })
+    this.formdata.reset();
+  }
+
+  
+
+
+
+
 
 }
