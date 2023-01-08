@@ -6,7 +6,7 @@
     </div>
     <div class="col-4">
       <button type="button" data-bs-toggle="modal" data-bs-target="#agregarHabilidad_Modal" class="btn btn-secondary"><i class="bi bi-plus-square" style="font-size: 1rem"></i> Agregar</button>
-      <app-edicion-crear-nuevo-habilidad></app-edicion-crear-nuevo-habilidad>
+      <app-edicion-crear-nuevo-habilidad (createEvent)="refreshList()"></app-edicion-crear-nuevo-habilidad>
     </div>
   </div>
 
