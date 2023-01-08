@@ -8,7 +8,7 @@
       <button type="button" data-bs-toggle="modal" data-bs-target="#agregarProyecto_Modal" class="btn btn-secondary"><i
           class="bi bi-plus-square" style="font-size: 1rem"></i>
         Agregar</button>
-      <app-edicion-crear-nuevo-proyecto></app-edicion-crear-nuevo-proyecto>
+      <app-edicion-crear-nuevo-proyecto (createEvent)="refreshList()"></app-edicion-crear-nuevo-proyecto>
     </div>
   </div>
 
