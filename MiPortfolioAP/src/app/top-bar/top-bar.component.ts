@@ -13,7 +13,6 @@ export class TopBarComponent implements OnInit {
 
   
   miPortfolio:any;
-
   constructor(private datosPortfolio:PortfolioService) {
     
   }
@@ -25,7 +24,9 @@ export class TopBarComponent implements OnInit {
     })
   }
 
-  
+  refreshList() {
+    this.ngOnInit();
+  }  
 
 
 
