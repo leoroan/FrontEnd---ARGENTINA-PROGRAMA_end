@@ -7,6 +7,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   templateUrl: './edicion-crear-nuevo.component.html',
   styleUrls: ['./edicion-crear-nuevo.component.css']
 })
+
 export class EdicionCrearNuevoComponent implements OnInit {
 
   someInput: any;
@@ -18,10 +19,10 @@ export class EdicionCrearNuevoComponent implements OnInit {
   ngOnInit(): void {
 
     this.formdata = new FormGroup({
-      titulo_puesto: new FormControl(),
-      periodo_Trabajado: new FormControl(),
-      logo_url: new FormControl(),
-      descripcion: new FormControl(),
+      titulo_puesto: new FormControl( '', [ Validators.required, Validators.minLength(8), Validators.maxLength(20)]),
+      periodo_Trabajado: new FormControl('desde dd/mm/aaaa hasta dd/mm/aaaa', Validators.required),
+      logo_url: new FormControl('', [Validators.required, Validators.maxLength(250)]),
+      descripcion: new FormControl('', [Validators.required, Validators.maxLength(250)]),
     });
 
   }
