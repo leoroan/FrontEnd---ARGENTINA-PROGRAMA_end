@@ -68,14 +68,15 @@
         <div class="col-md1 text-end">
           <button type="button" class="btn btn-outline-dark me-2 position-relative" data-bs-toggle="modal"
             data-bs-target="#login-Modal">Log In</button>
-            <app-login></app-login>
+          <app-login></app-login>
         </div>
         <div class="">
-          <button type="button" data-bs-toggle="modal" data-bs-target="#editarPersona_Modal" class="btn btn-primary">administrar</button>
-          <app-edicion-editar-persona [thisPer]="miPortfolio" (createEvent)="refreshList()"></app-edicion-editar-persona>
+          <button type="button" data-bs-toggle="modal" data-bs-target="#editarPersona_Modal"
+            class="btn btn-primary">administrar</button>
+          <app-edicion-editar-persona [thisPer]="miPortfolio"></app-edicion-editar-persona>
         </div>
 
-        
+
 
       </div>
     </div>

@@ -1,9 +1,10 @@
 <!-- Modal -->
-<div class="modal fade" id="agregarEstudio_Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" [id]="'actualizarEstudio_Modal'+thisEdu.id" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Nueva Educacion</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Fomacion</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -16,7 +17,7 @@
               formControlName="nombre_instituto">
             <div class="col-auto">
               <span id="inputLine1HelpInline" class="form-text">
-                Maximo 20 carácteres, Min 8.
+                Maximo 20 carácteres
               </span>
             </div>
           </div>
@@ -62,7 +63,7 @@
           </div>
 
           <button type="submit" [disabled]="!formdata.valid" data-bs-dismiss="modal"
-            class="btn btn-primary">Agregar</button>
+            class="btn btn-primary">Editar</button>
         </form>
 
       </div>

@@ -1,9 +1,9 @@
 <div class="container text-center card-footer">
   <div class="row">
-    <div class="col d-grid">
-      <button type="button" class="btn">
+    <div class="col d-grid">      
+      <button type="button" class="btn" (click)="onClickUpdate()" data-bs-toggle="modal" [attr.data-bs-target]="'#actualizarEstudio_Modal'+thisEdu.id">
         <i class="bi bi-pencil text-muted"></i>
-      </button>
+      </button>              
     </div>
     <div class="col d-grid">
       <button type="button" class="btn" (click)="onClickDelete()">
@@ -12,3 +12,8 @@
     </div>
   </div>
 </div>
+
+<app-update [thisEdu]="thisEdu" (modEvent)="refreshList()"></app-update>
+
+
+

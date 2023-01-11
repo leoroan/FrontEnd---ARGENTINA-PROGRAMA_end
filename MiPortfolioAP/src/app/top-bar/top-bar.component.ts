@@ -10,11 +10,9 @@ import { PortfolioService } from '../servicios/portfolio.service';
 
 
 export class TopBarComponent implements OnInit {
-
   
   miPortfolio:any;
-  constructor(private datosPortfolio:PortfolioService) {
-    
+  constructor(private datosPortfolio:PortfolioService) {    
   }
 
   ngOnInit(): void {
@@ -24,9 +22,7 @@ export class TopBarComponent implements OnInit {
     })
   }
 
-  refreshList() {
-    this.ngOnInit();
-  }  
+
 
 
 

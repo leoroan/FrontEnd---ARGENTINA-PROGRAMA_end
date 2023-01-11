@@ -11,6 +11,7 @@ export class PortfolioService {
   url_ver: String = "http://localhost:8080/ver/";
   url_borrar: String = "http://localhost:8080/borrar/";
   url_nueva_update: String = "http://localhost:8080/nueva/";
+  url_buscar: String = "http://localhost:8080/buscar/";
 
   constructor(private http: HttpClient) { }
 
@@ -77,6 +78,7 @@ export class PortfolioService {
     return this.http.post<any>(this.url_nueva_update + "proyecto", dat);
   }
 
-
-
+  buscarDatosEducacion(id: number): Observable<number> {
+    return this.http.get<number>(this.url_buscar + "educacion/" + id);
+  }
 }

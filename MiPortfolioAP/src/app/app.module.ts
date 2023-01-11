@@ -25,6 +25,7 @@ import { EdicionCrearNuevoProyectoComponent } from './proyectos/edicion-crear-nu
 import { EdicionCrearNuevoEstudioComponent } from './estudios/edicion-crear-nuevo-estudio/edicion-crear-nuevo-estudio.component';
 import { EdicionEditarPersonaComponent } from './top-bar/edicion-editar-persona/edicion-editar-persona.component';
 import { LoginComponent } from './top-bar/login/login.component';
+import { UpdateComponent } from './estudios/edicion-estudios/update/update.component';
 
 
 @NgModule({
@@ -47,13 +48,15 @@ import { LoginComponent } from './top-bar/login/login.component';
     EdicionCrearNuevoEstudioComponent,
     EdicionEditarPersonaComponent,
     LoginComponent,
+    UpdateComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [PortfolioService,{
     provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true},

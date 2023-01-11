@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -9,20 +10,38 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 export class EdicionEstudiosComponent implements OnInit {
 
   @Input() thisEdu: any;
-  @Output() deleteEvent = new EventEmitter();
-  
+  @Output() modEvent = new EventEmitter();
+  thisSelected: any;
+
+
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
+    
+    //console.log("onInit: "+this.thisEdu.id);
   }
 
   onClickDelete(){
-    this.datosPortfolio.borrarDatosEducacion(this.thisEdu)
+    this.datosPortfolio.borrarDatosEducacion(this.thisEdu.id)
       .subscribe(data =>{       
-        console.log("Deleted id: "+this.thisEdu);
         //location.reload();
-        this.deleteEvent.emit();
+        this.refreshList();
     })
   }
+
+  onClickUpdate() {
+    this.datosPortfolio.buscarDatosEducacion(this.thisEdu.id)
+      .subscribe(data => {
+      //console.log(JSON.stringify(data))
+      this.thisSelected = data;    
+      })
+  }
+
+  refreshList() {
+    this.modEvent.emit();
+  }
+
+
+
 
 }

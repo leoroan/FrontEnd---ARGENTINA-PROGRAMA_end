@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
@@ -14,7 +14,6 @@ export class EdicionEditarPersonaComponent implements OnInit {
   formdata: any;
   mailRegex = /@.*[a-zA-Z]+/;
   urlRegex = /w+\..*\.[A-Za-z0-9]+/ism;
-  @Output() createEvent = new EventEmitter();
 
   constructor(private datosPortfolio: PortfolioService) { }
 
@@ -34,15 +33,13 @@ export class EdicionEditarPersonaComponent implements OnInit {
 
     });
 
-    console.log(this.thisPer)
-
   }
 
   onClickSubmit(datos: any) {
     this.datosPortfolio.actualizarDatosPersona(datos)
       .subscribe(data => {
-        console.log(JSON.stringify(datos));
-        this.createEvent.emit();
+        //console.log(JSON.stringify(datos));
+        location.reload();
       })
     this.formdata.reset();
   }

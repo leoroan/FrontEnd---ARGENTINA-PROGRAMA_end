@@ -8,7 +8,6 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class EdicionCrearNuevoEstudioComponent implements OnInit {
 
-  someInput: any;
   formdata: any;
   @Output() createEvent = new EventEmitter();
 
@@ -17,7 +16,7 @@ export class EdicionCrearNuevoEstudioComponent implements OnInit {
   ngOnInit(): void {
 
     this.formdata = new FormGroup({
-      nombre_instituto: new FormControl( '', [ Validators.required, Validators.minLength(8), Validators.maxLength(20)]),
+      nombre_instituto: new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(20)]),
       titulo: new FormControl('', Validators.required),
       url_logo: new FormControl('', [Validators.required, Validators.maxLength(250)]),
       fecha_inicio: new FormControl('dd/mm/aaaa', [Validators.required, Validators.maxLength(10)]),
@@ -29,7 +28,7 @@ export class EdicionCrearNuevoEstudioComponent implements OnInit {
   onClickSubmit(datos: any) {
     this.datosPortfolio.agregarActualizarDatosEducacion(datos)
       .subscribe(data => {
-        console.log(JSON.stringify(datos));
+        //console.log(JSON.stringify(datos));
         this.createEvent.emit();
       })
     this.formdata.reset();
