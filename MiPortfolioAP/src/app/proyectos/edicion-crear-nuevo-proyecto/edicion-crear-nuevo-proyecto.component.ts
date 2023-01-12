@@ -19,7 +19,7 @@ export class EdicionCrearNuevoProyectoComponent implements OnInit {
 
   ngOnInit(): void {
     this.formdata = new FormGroup({
-      nombre: new FormControl( '', [ Validators.required, Validators.minLength(10), Validators.maxLength(100)]),
+      nombre: new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(100)]),
       url_foto: new FormControl('', [Validators.required, Validators.maxLength(250), Validators.pattern(this.urlRegex)]),
       url_proyecto: new FormControl('', [Validators.required, Validators.maxLength(250)]),
       descripcion: new FormControl('', [Validators.required, Validators.maxLength(250)])

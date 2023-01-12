@@ -8,22 +8,32 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class EdicionProyectosComponent implements OnInit {
 
-  
+
   @Input() thisProy: any;
-  @Output() deleteEvent = new EventEmitter();
-  
-  constructor(private datosPortfolio:PortfolioService) { }
+  @Output() modEvent = new EventEmitter();
+  thisSelected: any;
+
+  constructor(private datosPortfolio: PortfolioService) { }
 
   ngOnInit(): void {
   }
 
-  onClickDelete(){
-    this.datosPortfolio.borrarDatosProyectos(this.thisProy)
-      .subscribe(data =>{       
-        console.log("Deleted id: "+this.thisProy);
-        //location.reload();
-        this.deleteEvent.emit();
-    })
+  onClickDelete() {
+    this.datosPortfolio.borrarDatosProyectos(this.thisProy.id)
+      .subscribe(data => {
+        this.refreshList();
+      })
+  }
+
+  onClickUpdate() {
+    this.datosPortfolio.buscarDatosProyecto(this.thisProy.id)
+      .subscribe(data => {
+        this.thisSelected = data;
+      })
+  }
+
+  refreshList() {
+    this.modEvent.emit();
   }
 
 }

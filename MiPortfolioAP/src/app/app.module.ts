@@ -28,6 +28,7 @@ import { LoginComponent } from './top-bar/login/login.component';
 import { UpdateComponent } from './estudios/edicion-estudios/update/update.component';
 import { UpdateExperienciaComponent } from './experiencia/edicion-experiencia/update-experiencia/update-experiencia.component';
 import { UpdateHabilidadesComponent } from './hardysoft/edicion-hardysoft/update-habilidades/update-habilidades.component';
+import { UpdateProyectosComponent } from './proyectos/edicion-proyectos/update-proyectos/update-proyectos.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { UpdateHabilidadesComponent } from './hardysoft/edicion-hardysoft/update
     UpdateComponent,
     UpdateExperienciaComponent,
     UpdateHabilidadesComponent,
+    UpdateProyectosComponent,
  
   ],
   imports: [
