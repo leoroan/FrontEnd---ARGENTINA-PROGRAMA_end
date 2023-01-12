@@ -1,7 +1,7 @@
-<div *ngIf="isLoggedIn" class="container text-center card-footer">
+<div class="container text-center card-footer">
   <div class="row">
     <div class="col d-grid">
-      <button type="button" class="btn">
+      <button type="button" class="btn" (click)="onClickUpdate()" data-bs-toggle="modal" [attr.data-bs-target]="'#actualizarExperiencia_Modal'+thisExp.id">
         <i class="bi bi-pencil text-muted"></i>
       </button>
     </div>
@@ -12,3 +12,6 @@
     </div>
   </div>
 </div>
+
+<app-update-experiencia [thisExp]="thisExp" (modEvent)="refreshList()"></app-update-experiencia>
+

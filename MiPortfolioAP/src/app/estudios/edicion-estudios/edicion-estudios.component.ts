@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -17,8 +16,6 @@ export class EdicionEstudiosComponent implements OnInit {
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-    
-    //console.log("onInit: "+this.thisEdu.id);
   }
 
   onClickDelete(){

@@ -9,21 +9,31 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 export class EdicionExperienciaComponent implements OnInit {
 
   @Input() thisExp: any;
-  @Input() isLoggedIn: any;
-  @Output() deleteEvent = new EventEmitter();
+  @Output() modEvent = new EventEmitter();
+  thisSelected: any;
 
   constructor(private datosPortfolio: PortfolioService) { }
 
   ngOnInit(): void {
   }
 
-  onClickDelete() {
-    this.datosPortfolio.borrarDatosExperiencias(this.thisExp)
+  onClickDelete(){
+    this.datosPortfolio.borrarDatosExperiencias(this.thisExp.id)
+      .subscribe(data =>{       
+        this.refreshList();
+    })
+  }
+
+  onClickUpdate() {
+    this.datosPortfolio.buscarDatosExperiencia(this.thisExp.id)
       .subscribe(data => {
-        console.log("Deleted id: " + this.thisExp);
-        //location.reload();
-        this.deleteEvent.emit();
+      //console.log(JSON.stringify(data))
+      this.thisSelected = data;    
       })
+  }
+
+  refreshList() {
+    this.modEvent.emit();
   }
 
 }

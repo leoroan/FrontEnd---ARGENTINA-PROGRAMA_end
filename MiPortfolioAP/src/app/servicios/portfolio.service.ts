@@ -81,4 +81,20 @@ export class PortfolioService {
   buscarDatosEducacion(id: number): Observable<number> {
     return this.http.get<number>(this.url_buscar + "educacion/" + id);
   }
+
+  buscarDatosExperiencia(id: number): Observable<number> {
+    return this.http.get<number>(this.url_buscar + "experiencia/" + id);
+  }
+
+  buscarDatosHabilidad(id: number): Observable<number> {
+    return this.http.get<number>(this.url_buscar + "habilidad/" + id);
+  }
+
+  buscarDatosPersona(id: number): Observable<number> {
+    return this.http.get<number>(this.url_buscar + "persona/" + id);
+  }
+
+  buscarDatosProyecto(id: number): Observable<number> {
+    return this.http.get<number>(this.url_buscar + "proyecto/" + id);
+  }
 }

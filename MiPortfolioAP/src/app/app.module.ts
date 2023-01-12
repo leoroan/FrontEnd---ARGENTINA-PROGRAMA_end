@@ -26,7 +26,7 @@ import { EdicionCrearNuevoEstudioComponent } from './estudios/edicion-crear-nuev
 import { EdicionEditarPersonaComponent } from './top-bar/edicion-editar-persona/edicion-editar-persona.component';
 import { LoginComponent } from './top-bar/login/login.component';
 import { UpdateComponent } from './estudios/edicion-estudios/update/update.component';
-
+import { UpdateExperienciaComponent } from './experiencia/edicion-experiencia/update-experiencia/update-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +49,8 @@ import { UpdateComponent } from './estudios/edicion-estudios/update/update.compo
     EdicionEditarPersonaComponent,
     LoginComponent,
     UpdateComponent,
-
+    UpdateExperienciaComponent,
+ 
   ],
   imports: [
     BrowserModule,
