@@ -1,7 +1,7 @@
 <div class="container text-center card-footer">
   <div class="row">
     <div class="col d-grid">
-      <button type="button" class="btn">
+      <button type="button" class="btn" (click)="onClickUpdate()" data-bs-toggle="modal" [attr.data-bs-target]="'#actualizarHabilidad_Modal'+thisHab.id">
         <i class="bi bi-pencil text-muted"></i>
       </button>
     </div>
@@ -12,3 +12,5 @@
     </div>
   </div>
 </div>
+
+<app-update-habilidades [thisHab]="thisHab" (modEvent)="refreshList()"></app-update-habilidades>

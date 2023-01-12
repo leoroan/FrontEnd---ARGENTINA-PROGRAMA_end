@@ -17,18 +17,18 @@ export class EdicionExperienciaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClickDelete(){
+  onClickDelete() {
     this.datosPortfolio.borrarDatosExperiencias(this.thisExp.id)
-      .subscribe(data =>{       
+      .subscribe(data => {
         this.refreshList();
-    })
+      })
   }
 
   onClickUpdate() {
     this.datosPortfolio.buscarDatosExperiencia(this.thisExp.id)
       .subscribe(data => {
-      //console.log(JSON.stringify(data))
-      this.thisSelected = data;    
+        //console.log(JSON.stringify(data))
+        this.thisSelected = data;
       })
   }
 

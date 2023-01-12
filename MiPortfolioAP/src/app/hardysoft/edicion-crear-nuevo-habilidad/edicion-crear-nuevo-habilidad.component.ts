@@ -17,7 +17,7 @@ export class EdicionCrearNuevoHabilidadComponent implements OnInit {
 
   ngOnInit(): void {
     this.formdata = new FormGroup({
-      nombre_habilidad: new FormControl( '', [ Validators.required, Validators.minLength(3), Validators.maxLength(20)]),
+      nombre_habilidad: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]),
       porcentaje: new FormControl('', [Validators.required, Validators.min(0), Validators.max(100)]),
       priodo: new FormControl('mm/aaaa', Validators.required),
       descripcion: new FormControl('', [Validators.required, Validators.maxLength(250)])

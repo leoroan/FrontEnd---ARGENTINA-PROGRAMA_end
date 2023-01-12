@@ -1,9 +1,9 @@
 <!-- Modal -->
-<div class="modal fade" [id]="'actualizarExperiencia_Modal'+thisExp.id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" [id]="'actualizarHabilidad_Modal'+thisHab.id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Nueva experiencia</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Nueva Habilidad dura/blanda</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -11,42 +11,42 @@
         <!-- form -->
         <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
           <div class="mb-3">
-            <label for="inputLine1_lab" class="form-label">Nombre / Titulo del puesto</label>
+            <label for="inputLine1_lab" class="form-label">Nombre / titulo habilidad</label>
             <input type="text" id="inputLine1_txt" name="inputLine1_txt" class="form-control"
-              formControlName="titulo_puesto">
+              formControlName="nombre_habilidad">
             <div class="col-auto">
               <span id="inputLine1HelpInline" class="form-text">
-                Must be 8-20 characters long.
+                Maximo 20 carácteres
               </span>
             </div>
           </div>
 
           <div class="mb-3">
-            <label for="inputLine2_lab" class="form-label">Periodo trabajado</label>
-            <input type="text" id="inputLine2_txt" class="form-control" formControlName="periodo_Trabajado">
+            <label for="inputLine2_lab" class="form-label">Porcentaje de habilidad en el conocimiento obtenido</label>
+            <input type="number" id="inputLine2_txt" class="form-control" formControlName="porcentaje">
             <div class="col-auto">
               <span id="inputLine2HelpInline" class="form-text">
-                desde / hasta.
+                del 0 al 100
               </span>
             </div>
           </div>
 
           <div class="mb-3">
-            <label for="inputLine4_lab" class="form-label">Descripcion de la experiencia laboral</label>
-            <input type="text" id="inputLine4_txt" class="form-control" formControlName="descripcion">
+            <label for="inputLine4_lab" class="form-label">Fecha</label>
+            <input type="text" id="inputLine4_txt" class="form-control" formControlName="priodo">
             <div class="col-auto">
               <span id="inputLine4HelpInline" class="form-text">
-                Maximo 250 caracteres.
+                mm/aaaa
               </span>
             </div>
           </div>
 
           <div class="mb-3">
-            <label for="inputLine3_lab" class="form-label">Link del logo/foto institucion</label>
-            <input type="text" id="inputLine3_txt" class="form-control" formControlName="logo_url">
+            <label for="inputLine3_lab" class="form-label">Descripcion, o más detalles</label>
+            <input type="text" id="inputLine3_txt" class="form-control" formControlName="descripcion">
             <div class="col-auto">
               <span id="inputLine3HelpInline" class="form-text">
-                url completa.
+                dd/mm/aaaa.
               </span>
             </div>
           </div>

@@ -9,20 +9,30 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 export class EdicionHardysoftComponent implements OnInit {
 
   @Input() thisHab: any;
-  @Output() deleteEvent = new EventEmitter();
+  @Output() modEvent = new EventEmitter();
+  thisSelected: any;
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio: PortfolioService) { }
 
   ngOnInit(): void {
   }
 
-  onClickDelete(){
-    this.datosPortfolio.borrarDatosHabilidades(this.thisHab)
-      .subscribe(data =>{       
-        console.log("Deleted id: "+this.thisHab);
-        location.reload();
-        //this.deleteEvent.emit();
-    })
+  onClickDelete() {
+    this.datosPortfolio.borrarDatosHabilidades(this.thisHab.id)
+      .subscribe(data => {
+        this.refreshList();
+      })
+  }
+
+  onClickUpdate() {
+    this.datosPortfolio.buscarDatosHabilidad(this.thisHab.id)
+      .subscribe(data => {
+        this.thisSelected = data;
+      })
+  }
+
+  refreshList() {
+    this.modEvent.emit();
   }
 
 }
