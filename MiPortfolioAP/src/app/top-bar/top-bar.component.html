@@ -67,12 +67,13 @@
         <!-- login trigger modal -->
         <div class="col-md1 text-end">
           <button type="button" class="btn btn-outline-dark me-2 position-relative" data-bs-toggle="modal"
-            data-bs-target="#login-Modal">Log In</button>
+            data-bs-target="#login-Modal" *ngIf="!isLoggedIn()">log In</button>
           <app-login></app-login>
+          <button type="button" class="btn btn-outline-dark me-2 position-relative"  *ngIf="isLoggedIn()" (click)="logOuted()">Salir</button>
         </div>
         <div class="">
           <button type="button" data-bs-toggle="modal" data-bs-target="#editarPersona_Modal"
-            class="btn btn-primary">administrar</button>
+            class="btn btn-primary" *ngIf="isLoggedIn()">administrar</button>
           <app-edicion-editar-persona [thisPer]="miPortfolio"></app-edicion-editar-persona>
         </div>
 

@@ -38,7 +38,6 @@ export class EdicionEditarPersonaComponent implements OnInit {
   onClickSubmit(datos: any) {
     this.datosPortfolio.actualizarDatosPersona(datos)
       .subscribe(data => {
-        //console.log(JSON.stringify(datos));
         location.reload();
       })
     this.formdata.reset();

@@ -28,7 +28,7 @@
                 </p>
               </div>
             </div>
-            <app-edicion-hardysoft [thisHab]="hab" (modEvent)="refreshList()"></app-edicion-hardysoft>
+            <app-edicion-hardysoft *ngIf="isLoggedIn()" [thisHab]="hab" (modEvent)="refreshList()"></app-edicion-hardysoft>
           </div>
         </div>
       </div>

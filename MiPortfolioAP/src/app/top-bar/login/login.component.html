@@ -9,11 +9,11 @@
       <div class="modal-body">
 
         <!-- Form -->
-        <form [formGroup]="form">
+        <form [formGroup]="form" >
           <div class="form-group row mb-2">
             <label for="staticEmail" class="col-sm-2 col-form-label ">Email</label>
             <div class="col-sm-10">
-              <input type="text" formControlName="email" class="form-control " id="email"
+              <input type="text" formControlName="user" class="form-control " id="user"
                 placeholder="Your Mail! ">
               <div class="valid-feedback">
                 Looks good!
@@ -21,11 +21,11 @@
             </div>
 
             <!-- form-validation -->
-            <div *ngIf="email?.errors && email?.touched">
-              <div *ngIf="email?.hasError('required')" class="text-danger">
+            <div *ngIf="user?.errors && user?.touched">
+              <div *ngIf="user?.hasError('required')" class="text-danger">
                 Email es requerido.
               </div>
-              <div *ngIf="email?.hasError('email')" class="text-danger">
+              <div *ngIf="user?.hasError('user')" class="text-danger">
                 El formato del mail debe ser válido.
               </div>
             </div>
@@ -50,7 +50,7 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"><i
             class="bi bi-door-closed"></i>Cancelar</button>
-        <button type="button" class="btn btn-outline-primary"><i class="bi bi-door-open"></i>Ingresar</button>
+        <button type="submit" (click)="send(form.value)" data-bs-dismiss="modal" class="btn btn-outline-primary"><i class="bi bi-door-open"></i>Enviar</button>
       </div>
     </div>
   </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AutenticacionService } from '../servicios/autenticacion.service';
 import { PortfolioService } from '../servicios/portfolio.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class EstudiosComponent implements OnInit {
 
   miEducacion:any;
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio:PortfolioService, private autenticacionService: AutenticacionService) { }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatosEducacion().subscribe(data =>{
@@ -20,6 +21,10 @@ export class EstudiosComponent implements OnInit {
 
   refreshList() {
     this.ngOnInit();
+  }
+
+  isLoggedIn(): boolean {
+    return this.autenticacionService.isUserLoggedIn();
   }
 
 

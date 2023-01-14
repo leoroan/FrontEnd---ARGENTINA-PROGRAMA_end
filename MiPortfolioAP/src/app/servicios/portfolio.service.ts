@@ -19,6 +19,14 @@ export class PortfolioService {
     return this.http.get<any>(this.url_ver + "persona");
   }
 
+  generarAutorizacion(dat: any): Observable<any> {
+    return this.http.post<any>(this.url_nueva_update + "autorizacion", dat);
+  }
+
+  obtenerAutorizaciones(): Observable<any> {
+    return this.http.get<any>(this.url_ver + "autorizaciones");
+  }
+
   actualizarDatosPersona(dat: any): Observable<any> {
     return this.http.post<any>(this.url_nueva_update + "persona", dat);
   }

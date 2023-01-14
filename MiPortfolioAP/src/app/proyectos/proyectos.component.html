@@ -20,7 +20,7 @@
         {{ proy.url_proyecto}}
       </p>
     </div>
-    <app-edicion-proyectos [thisProy]="proy" (modEvent)="refreshList()"></app-edicion-proyectos>
+    <app-edicion-proyectos *ngIf="isLoggedIn()" [thisProy]="proy" (modEvent)="refreshList()"></app-edicion-proyectos>
   </div>
 
 </body>

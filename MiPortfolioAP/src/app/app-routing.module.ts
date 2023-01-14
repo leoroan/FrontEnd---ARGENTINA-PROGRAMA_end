@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AcercadeComponent } from './acercade/acercade.component';
+import { AuthenticationGuardGuard } from './authentication-guard.guard';
 import { EstudiosComponent } from './estudios/estudios.component';
 import { ExperienciaComponent } from './experiencia/experiencia.component';
 import { HardysoftComponent } from './hardysoft/hardysoft.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
+import { LoginComponent } from './top-bar/login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'acercade', pathMatch: 'full' },
@@ -14,6 +16,7 @@ const routes: Routes = [
   { path: 'experiencia', component: ExperienciaComponent },
   { path: 'hardysoft', component: HardysoftComponent },
   { path: 'proyectos', component: ProyectosComponent },  
+  { path: 'login', component: LoginComponent, canActivate: [AuthenticationGuardGuard]},
 ];
 
 @NgModule({

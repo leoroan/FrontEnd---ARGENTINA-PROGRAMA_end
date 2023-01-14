@@ -1,5 +1,9 @@
+import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-login',
@@ -8,29 +12,31 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  form: FormGroup;
+  form = new FormGroup({
+    user: new FormControl("", Validators.required),
+    password: new FormControl("", [Validators.required, Validators.minLength(5)])
+  });
 
-  constructor(private formBuilder: FormBuilder) {
-
-    this.form = this.formBuilder.group(
-      {
-        email: ['', [Validators.required, Validators.email]],
-        password: ['', [Validators.required, Validators.minLength(10)]]
-      }
-    )
-
+  constructor(private autenticacionService: AutenticacionService, private ruta: Router) {
   }
 
-  get email() {
-    return this.form.get('email');
+  ngOnInit(): void {
+  }
+
+  get user() {
+    return this.form.get('user');
   }
 
   get password() {
     return this.form.get('password');
   }
 
-
-  ngOnInit(): void {
+  send(data: any) {
+    this.autenticacionService.iniciarSesion(data);
+    //this.ruta.navigateByUrl("/acercade");
+    this.form.reset();    
   }
+
+
 
 }

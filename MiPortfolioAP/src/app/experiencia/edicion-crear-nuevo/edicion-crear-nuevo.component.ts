@@ -30,7 +30,6 @@ export class EdicionCrearNuevoComponent implements OnInit {
   onClickSubmit(datos: any) {
     this.datosPortfolio.agregarActualizarDatosExperiencias(datos)
       .subscribe(data => {
-        console.log(JSON.stringify(datos));
         this.createEvent.emit();
       })
     this.formdata.reset();
