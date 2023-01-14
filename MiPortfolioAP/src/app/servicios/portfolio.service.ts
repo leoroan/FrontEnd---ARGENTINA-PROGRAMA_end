@@ -8,10 +8,15 @@ import { Observable } from 'rxjs';
 export class PortfolioService {
 
   // url de mi bbdd
-  url_ver: String = "http://localhost:8080/ver/";
-  url_borrar: String = "http://localhost:8080/borrar/";
-  url_nueva_update: String = "http://localhost:8080/nueva/";
-  url_buscar: String = "http://localhost:8080/buscar/";
+  //url_ver: String = "http://bfi6ma0atat2w1j46csd-mysql.services.clever-cloud.com:3306/ver/";
+  //url_borrar: String = "http://localhost:8080/borrar/";
+  //url_nueva_update: String = "http://localhost:8080/nueva/";
+  //url_buscar: String = "http://localhost:8080/buscar/";.
+
+  url_ver: String = "http://bfi6ma0atat2w1j46csd-mysql.services.clever-cloud.com:3306/ver/";
+  url_borrar: String = "http://bfi6ma0atat2w1j46csd-mysql.services.clever-cloud.com:3306/borrar/";
+  url_nueva_update: String = "http://bfi6ma0atat2w1j46csd-mysql.services.clever-cloud.com:3306/nueva/";
+  url_buscar: String = "http://bfi6ma0atat2w1j46csd-mysql.services.clever-cloud.com:3306/buscar/";
 
   constructor(private http: HttpClient) { }
 
