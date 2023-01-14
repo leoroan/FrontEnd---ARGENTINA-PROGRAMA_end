@@ -13,10 +13,10 @@ export class PortfolioService {
   //url_nueva_update: String = "http://localhost:8080/nueva/";
   //url_buscar: String = "http://localhost:8080/buscar/";.
 
-  url_ver: String = "http://bfi6ma0atat2w1j46csd-mysql.services.clever-cloud.com:3306/ver/";
-  url_borrar: String = "http://bfi6ma0atat2w1j46csd-mysql.services.clever-cloud.com:3306/borrar/";
-  url_nueva_update: String = "http://bfi6ma0atat2w1j46csd-mysql.services.clever-cloud.com:3306/nueva/";
-  url_buscar: String = "http://bfi6ma0atat2w1j46csd-mysql.services.clever-cloud.com:3306/buscar/";
+  url_ver: String = "http://likely-sadye-leoroan.koyeb.app/ver/";
+  url_borrar: String = "http://likely-sadye-leoroan.koyeb.app/borrar/";
+  url_nueva_update: String = "http://likely-sadye-leoroan.koyeb.app/nueva/";
+  url_buscar: String = "http://likely-sadye-leoroan.koyeb.app/buscar/";
 
   constructor(private http: HttpClient) { }
 
